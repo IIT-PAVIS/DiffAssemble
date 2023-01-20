@@ -1,0 +1,23 @@
+name: diffassemble
+
+channels:
+  - pytorch
+  - conda-forge
+  - pyg
+  - nvidia
+
+dependencies:
+  - pytorch==1.12.1
+  - cudatoolkit<=11.3.10
+  - pyg
+  - einops
+  - black
+  - pre-commit
+  - pytorch-lightning<1.8
+  - pip
+  - matplotlib
+  - wandb
+  - transformers
+  - timm
+  - kornia
+  - trimesh

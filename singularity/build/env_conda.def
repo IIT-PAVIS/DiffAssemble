@@ -1,0 +1,31 @@
+# -----------------------------------------------------------------------------------
+BootStrap: docker
+From: nvidia/cuda:12.0.0-devel-ubuntu20.04 #nvidia/cuda:10.2-cudnn8-devel-ubuntu18.04
+
+# -----------------------------------------------------------------------------------
+%environment
+    export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:$LD_LIBRARY_PATH
+    export LC_ALL=C
+    export CC=cc
+    export DEBIAN_FRONTEND=noninteractive
+    export TZ=Etc/UTC
+
+# -----------------------------------------------------------------------------------
+%files
+Mambaforge-Linux-x86_64.sh /opt/conda.sh
+conda_env.yaml /opt/conda_env.yaml
+
+
+# -----------------------------------------------------------------------------------
+%post -c /bin/bash
+apt-get update
+DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
+apt-get install ffmpeg libsm6 libxext6 libgl1 git -y
+sh /opt/conda.sh -b -p /opt/conda
+source /opt/conda/bin/activate
+conda init
+rm /opt/conda.sh
+apt install vim -y
+conda update mamba -y
+
+mamba env create -n SCG_OL --file /opt/conda_env.yaml
