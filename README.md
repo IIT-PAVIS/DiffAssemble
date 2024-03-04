@@ -65,6 +65,7 @@ in 5s with 95% accurac
 - We provide the environment definition in `singularity/build/conda_env.yaml`
 - Singularity image is also available at [WIP]
 - Requirements:
+  
 ```
   - pytorch==1.12.1
   - cudatoolkit<=11.3.10
