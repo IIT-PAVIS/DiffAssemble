@@ -87,7 +87,7 @@ in 5s with 95% accurac
 # Cite us!
 ```
 @InProceedings{scarpellini2024diffassemble,
-    author    = {Gianluca Scarpellini and Stefano Fiorini and Francesco Giuliari and Pietro Morerio and Alessio Del Bue},
+    author    = {Gianluca Scarpellini and Stefano Fiorini and Francesco Giuliari and Pietro Morerio and Alessio {Del Bue}},
     title     = {DiffAssemble: A Unified Graph-Diffusion Model for 2D and 3D Reassembly},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     month     = {June},
