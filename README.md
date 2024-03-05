@@ -8,8 +8,7 @@ Reassembly tasks play a fundamental role in many fields and multiple approaches 
 
 # Method
 ![Architecture](https://raw.githubusercontent.com/IIT-PAVIS/DiffAssemble/release/page/architecture.jpg)
-Following the Diffusion Probabilistic
-Models formulations, we model a Markov chain where we inject noise into the pieces’ position and orientation. At timestep t = 0, the
+Following the Diffusion Probabilistic Models formulations, we model a Markov chain where we inject noise into the pieces’ position and orientation. At timestep t = 0, the
 pieces are in their correct position, and at timestep t = T , they are in a random position with random orientation. At each timestep t, our
 attention-based GNN takes as input a graph where each node contains an equivariant feature that describes a particular piece and its position
 and orientation. The network then predicts a less noisy version of the piece’s position and orientation.
